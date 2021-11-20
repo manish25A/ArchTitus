@@ -84,7 +84,6 @@ PKGS=(
 'btrfs-progs'
 'celluloid' # video players
 'cmatrix'
-'code' # Visual Studio code
 'cronie'
 'cups'
 'dialog'
@@ -153,6 +152,7 @@ PKGS=(
 'oxygen'
 'p7zip'
 'pacman-contrib'
+'pamac'
 'patch'
 'picom'
 'pkgconf'
@@ -206,6 +206,7 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
+yay -S visual-studio-code-bin optimus-manager optimus-manager-qt --noconfirm --needed
 
 #
 # determine processor type and install microcode
